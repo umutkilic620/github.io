@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umut Kılıç | Kişisel Web Sitesi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #6200ea;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        nav {
+            background: #1e1e1e;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 15px;
+            display: block;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background-color: #333333;
+            border-radius: 8px;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-align: center;
+            animation: slideBackground 20s linear infinite;
+        }
+
+        @keyframes slideBackground {
+            0% { background-position: 0 0; }
+            100% { background-position: -100% 0; }
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 40px;
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile h2 {
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+
+        .profile p {
+            font-size: 1.2rem;
+            color: #cccccc;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #6200ea;
+            border-bottom: 2px solid #6200ea;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #dddddd;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            font-size: 2rem;
+            background: #333333;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 25px rgba(98, 0, 234, 0.3);
+        }
+
+        .social-icons a.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .social-icons a.x { background: #1da1f2; }
+        .social-icons a.youtube { background: #ff0000; }
+        .social-icons a.tiktok { background: #010101; }
+        .social-icons a.kick { background: #00e676; }
+        .social-icons a.github { background: #24292e; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #6200ea;
+            color: #ffffff;
+            margin-top: 50px;
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #cccccc;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            section h2 {
+                font-size: 2.2rem;
+            }
+
+            section p {
+                font-size: 1.1rem;
+            }
+
+            .social-icons a {
+                width: 50px;
+                height: 50px;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Umut Kılıç</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">Hakkımda</a></li>
+            <li><a href="#social">Sosyal Medya</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <h2>Merhaba, ben Umut Kılıç</h2>
+    </div>
+    <div class="container">
+        <div class="profile">
+            <img src="https://r.resimlink.com/c95Qr08T.jpg" alt="Umut Kılıç">
+            <h2>Umut Kılıç</h2>
+            <p>Merhaba! Ben Umut Kılıç. Yazılım geliştiricisi ve içerik üreticisiyim.</p>
+        </div>
+        <section id="about">
+            <h2>Umut Kılıç Kimdir?</h2>
+            <p>Merhaba, ben Umut Kılıç. 20 yaşındayım ve aslen Tunceli/Çemişgezekliyim, ancak doğma büyüme Ankaralıyım ve burada yaşıyorum. Şu anda üniversiteye hazırlanıyorum, aynı zamanda hem yazılım alanında hem de yayıncılık ve içerik üretimi konusunda kendimi geliştirmeye odaklanıyorum. Hayallerimin peşinden koşuyor, her gün kendime bir şeyler katmaya çalışıyorum.</p>
+            <p>Bana göre, hayallerinizin peşinden gitmekten asla vazgeçmemelisiniz. Karşınıza çıkan engeller ne olursa olsun, onları aşmaya çalışarak yolunuza devam edin. Unutmayın, başarı azim ve inançla gelir!</p>
+        </section>
+
+        <section id="social">
+            <h2>Sosyal Medya Adreslerim</h2>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/umutklc620/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/umutkilic620" class="x" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/@umutkilic620" class="youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@umutkilic620" class="tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://kick.com/umutkilic620" class="kick" target="_blank"><i class="fas fa-gamepad"></i></a>
+                <a href="https://github.com/umutkilic620" class="github" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Umut Kılıç. Tüm hakları saklıdır.</p>
+        <p>
+            <a href="#about">Hakkımda</a> |
+            <a href="#social">Sosyal Medya</a>
+        </p>
+    </footer>
+</body>
+</html>
